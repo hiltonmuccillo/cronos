@@ -1,0 +1,114 @@
+<html lang="pt-br">
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>Login</title>
+	    <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+        <!-- Login CSS -->
+        <link rel="stylesheet" href="./css/login.css">   
+   </head>
+   
+   <body>    
+    <div class="animated-section">        
+        <div id="form-container" class="d-flex container-fluid position-relative align-items-center justify-content-center vh-100">
+            <div class="position-absolute div-image d-block" style="right: 15px; bottom: 15px; width: 44px; height: 44px;">
+                <img src="./images/simbolo-cronos.jpg" class="float-end image" width="30%" alt="">
+            </div> 
+            <div class="divider-left diagonal-divider"></div>
+            <div class="col-6 d-flex flex-column mb-4">
+                <img src="./images/logotipo-cronos2.png" class="mx-auto d-block img-fluid m-0" alt="">
+            </div>
+            <div class="col-5 d-flex position-relative flex-column justify-content-center">                               
+                <div id="etapa-login" class="d-inline-flex flex-column text-nowrap w-75">
+                    <h1 class="ps-3 text-white">Bem vindo a Cronos!</h1>                                                 
+                    <h3 class="text-left ps-3 fs-5 fw-normal">Forneca suas credencias para iniciar.</h3>
+                    <form id="form-logar" action="" class="text-left needs-validation" novalidate>
+                        <div class="form-floating mb-3 w-100">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Digite o seu e-mail" required>
+                            <div class="invalid-feedback ps-3">
+                                Por favor, preencha esse campo.
+                            </div>
+                            <label for="email" class="form-label">Digite o seu e-mail</label>
+                        </div>
+                        <div class="form-floating mb-3 w-100 position-relative">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Digite a sua senha"
+                                required>
+                                <!-- Show Password -->
+                                <span class="show-password float-end">
+                                    <button type="button"><i class="bi bi-eye text-white"></i></button>
+                                </span>
+                                <!-- / Show Password -->
+                            <div class="invalid-feedback ps-3">
+                                Por favor, preencha esse campo.
+                            </div>
+                            <label for="password" class="form-label">Digite a sua senha</label>
+                        </div>
+                        <div class="form-check mt-3 mb-2">
+                            <input type="checkbox" class="form-check-input me-3" value="" id="lembrar-conta" name="lembrar-conta">
+                            <label for="lembrar-conta" class="form-check-label text-white">
+                                Lembrar desta conta
+                            </label>
+                        </div>
+                        <div class="row w-100 d-flex flex-row justify-content-between">
+                            <div class="col-6">
+                                <input type="submit" class="btn btn-primary w-100 mt-3" value="Entrar">
+                            </div>                            
+                            <div class="col-6">
+                                <a href="#" id="esqueci-senha" class="d-inline-block mt-4 text-white text-decoration-none">
+                                    <small>Esqueceu a senha?</small>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="etapa-esqueci-senha" class="d-none flex-column text-nowrap w-75">
+                    <h1 class="ps-3 text-white">Esqueci minha senha</h1>                                                 
+                    <h3 class="text-left ps-3 fs-5 text-wrap fw-normal">Forneça suas credencias abaixo para receber um email de redefinição de senha.</h3>
+                    <form id="lembrar-senha" action="" class="text-left needs-validation" novalidate>
+                        <div class="form-floating mb-3 w-100">
+                            <input type="text" class="form-control masked-input" id="cpf" name="cpf" placeholder="Digite o seu cpf" required>
+                            <div class="invalid-feedback ps-3">
+                                Por favor, preencha esse campo.
+                            </div>
+                            <label for="cpf" class="form-label">Digite o seu cpf</label>
+                        </div>
+                        <div class="form-floating mb-3 w-100">
+                            <input type="email" class="form-control" id="email-esqueci" name="email-esqueci" placeholder="Digite o seu e-mail" required>
+                            <div class="invalid-feedback ps-3">
+                                Por favor, preencha esse campo.
+                            </div>
+                            <label for="email" class="form-label">Digite o seu e-mail</label>
+                        </div>
+                        <div class="row w-100 d-flex flex-row justify-content-between">
+                            <div class="col-6">
+                                <input type="submit" class="btn btn-primary w-100 mt-3" value="Solicitar">
+                            </div>
+                            <div class="col-6">
+                                <a href="#" id="cancelar-lembrar-senha" class="d-inline-block mt-4 text-white text-decoration-none">
+                                    <small>Cancelar</small>
+                                </a>
+                            </div>
+                        </div>                        
+                    </form>
+                </div>                      
+            </div>
+        </div>
+    </div>
+    
+        <!-- jQuery -->
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="./js/bootstrap.bundle.js"></script>
+        <!-- Masked Input -->
+        <script src="./js/jquery.maskedinput.js"></script>
+        <script src="./js/login.js"></script>
+   </body>
+</html>

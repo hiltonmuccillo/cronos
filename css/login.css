@@ -1,0 +1,172 @@
+html,
+body {
+  font-family: "Poppins", serif;
+  overflow: hidden;
+}
+
+body {
+  background: #112e83;
+}
+
+.animated-section {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #112e83, #14b8a6);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+h3 {
+  color: #fff;
+}
+
+.col-6,
+.col-5 {
+  z-index: 999;
+}
+
+#form-container {
+  overflow-x: hidden !important;
+}
+
+#form-container form {
+  padding-bottom: 0px;
+}
+
+#form-container .form-control {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0;
+  padding-top: 35px;
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #fff !important;
+  font-size: 14px;
+}
+
+#form-container .form-control:focus,
+#form-container .form-control:active {
+  box-shadow: none;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+#form-container .form-control:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#form-container .form-control:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+
+#form-container .form-floating label {
+  color: rgba(255, 255, 255, 1);
+}
+
+#form-container .form-floating>.form-control:focus~label {
+  color: rgba(255, 255, 255, 1);
+}
+
+#form-container input[type="checkbox"] {
+  background-color: rgba(0, 127, 192, 0.3);
+  border-color: rgba(0, 127, 192, 1);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#form-container input[type="submit"] {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.75);
+  padding: 0.5rem 0.75rem;
+  color: #112e83;
+}
+
+#form-container input[type="checkbox"]:checked {
+  background-color: rgba(0, 127, 192, 0.75);
+  border-color: rgba(0, 127, 192, 0.75);
+}
+
+#form-container input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 1);
+}
+
+#form-container input[type="checkbox"]:checked:hover {
+  background-color: rgba(0, 127, 192, 1);
+  border-color: rgba(0, 127, 192, 1);
+}
+
+.diagonal-divider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -54%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: skew(-25deg);
+}
+
+.divider-left {
+  background-color: #fff;
+  z-index: 0;
+}
+
+#etapa-login {
+  position: absolute;
+  /* margin-top: -130px; */
+  opacity: 1;
+  z-index: 2;
+  left: 0px;
+}
+
+#etapa-esqueci-senha {
+  position: absolute;
+  display: block;
+  /* margin-top: -130px; */
+  z-index: 2;
+  left: 6000px;
+}
+
+.invalid-feedback {
+  color: rgba(219, 234, 254, 0.35) !important;
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-control:valid {
+  background-image: none !important;
+}
+
+.image {
+  display: block !important;
+  width: 44px;
+  height: 44px;
+  border: 4px solid rgba(219, 234, 254, 1);
+  transition: 0.5s;
+  transform: rotateY(0deg);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Inicio Show Password */
+.show-password {
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+
+.show-password button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+/* Final Show Password */
