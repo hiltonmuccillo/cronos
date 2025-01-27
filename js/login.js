@@ -50,21 +50,18 @@ $(function(){
         }, 250);
     });
 
-    // Validação dos inputs dos forms com Bootstrap 5
-    (function () {
-        'use strict'
-        var forms = document.querySelectorAll('#form-logar.needs-validation, #lembrar-senha.needs-validation');
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated')
-                }, false);
-            })
-    })();
+    // Validação dos inputs dos forms com jQuery
+    $(function () {
+        'use strict';        
+        $('#form-logar.needs-validation, #lembrar-senha.needs-validation').on('submit', function (event) {
+            var form = $(this);
+            if (!form[0].checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.addClass('was-validated');
+        });
+    });
 
     // Inicio Show Password
     $(".show-password button").on("click", function () {
